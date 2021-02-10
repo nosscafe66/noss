@@ -16,15 +16,10 @@ import time
 import chromedriver_binary
 from webdriver_manager.chrome import ChromeDriverManager
 #%matplotlib inline
-
-#chromedriverは都度更新が必要なものになる。
  
 browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get('https://google.com')
-
 browser = webdriver.Chrome()
-#executable_path='/path/to/driver/chromedriver'
-#export PATH=$PATH:/path/to/driver/chrome-driver
     
 columnNames=[]
 ETFComparisonsTable=[]
@@ -39,13 +34,10 @@ for num in range(0,7):
     btnClick.click()
 
     
-    #choose a stock out of list
     stockClick=browser.find_elements_by_class_name("clickable")
     stockClick[num].find_element_by_tag_name("a").click()
     stockTable=browser.find_element_by_class_name("table_wrap")
     stockLine=stockTable.find_elements_by_tag_name("tr")
-    #browser.implicitly_wait(10)
-    #price scraping with calculation
     if len(stockLine)==302:
         ETFComparisons=[]
         for i in range(2,152):
@@ -54,12 +46,13 @@ for num in range(0,7):
             ETFComparison=float(stockETFPriceAfter[6].text)-float(stockETFPriceBefore[6].text)
             ETFComparisons.append(ETFComparison)
 
+            
         stockETFPriceAfter=stockLine[151].find_elements_by_tag_name("td")
         stockETFPriceBefore=stockLine[153].find_elements_by_tag_name("td")
         ETFComparison=float(stockETFPriceAfter[6].text)-float(stockETFPriceBefore[6].text)
         ETFComparisons.append(ETFComparison)
 
-        #browser.implicitly_wait(3)
+        
         for i in range(154,302):
             stockETFPriceAfter=stockLine[i-1].find_elements_by_tag_name("td")
             stockETFPriceBefore=stockLine[i].find_elements_by_tag_name("td")
@@ -68,12 +61,12 @@ for num in range(0,7):
 
         ETFComparisonsTable.append(ETFComparisons)
 
+        
         #pick up title
         stockTitleBox=browser.find_element_by_class_name("base_box_ttl")
         stockTitle=stockTitleBox.find_element_by_class_name("jp").text
         columnNames.append(stockTitle)
-#browser.implicitly_wait(10)
-#making ETF table
+
 
 ETFTable=pd.DataFrame(ETFComparisonsTable)
 ETFTable=ETFTable.T
@@ -82,10 +75,6 @@ ETFTable.columns=columnNames
 ETFTable.head()
 
 
-# In[4]:
-
-
-#date scraping
 browser.get("https://kabuoji3.com/stock/{}/".format(1321))
 stockTable=browser.find_element_by_class_name("table_wrap")
 stockLine=stockTable.find_elements_by_tag_name("tr")
@@ -104,9 +93,6 @@ df_date["year"]=df_date["date"].apply(lambda x:int(x.split("-")[0]))
 df_date["month"]=df_date["date"].apply(lambda x:int(x.split("-")[1]))
 df_date["day"]=df_date["date"].apply(lambda x:int(x.split("-")[2]))
 df_date.head()
-
-
-# In[5]:
 
 
 #stock scraping (comparison with yesterday)
@@ -133,23 +119,10 @@ df.columns=["日経225連動型上場投資信託：前日比"]
 df.head()
 
 
-# In[7]:
-
-
 #add table
 stockPriceTable=pd.concat([df_date,ETFTable],axis=1)
 stockPriceTable=pd.concat([stockPriceTable,df],axis=1)
 stockPriceTable.head()
-
-
-# In[6]:
-
-
-#columnNames=[]
-#ETFComparisonsTable=[]
-
-
-# In[8]:
 
 
 #prepare for making target values
@@ -184,15 +157,7 @@ table.index=table["date"]
 table["日経225連動型上場投資信託：翌日比"]=df_next["日経225連動型上場投資信託：翌日比"]
 table.tail()
 
-
-# In[9]:
-
-
 table.to_csv("./stockPriceData.csv",index=False)
-
-
-# In[10]:
-
 
 import pandas as pd
 import numpy as np
@@ -210,9 +175,6 @@ import json
 train=pd.read_csv("./stockPriceData.csv")
 train=train.dropna()
 train.head()
-
-
-# In[11]:
 
 
 features=['1329 iシェアーズ・コア 日経225ETF','1320 ダイワ 上場投信-日経225',
@@ -243,20 +205,6 @@ for pred in y_pred:
         predUpDown.append(1)
     else:
         predUpDown.append(-1)
-       
-    
-#print("確率："+str(metrics.accuracy_score(testUpDown,predUpDown)*100)+"%")
-
-#feature evaluation and plots
-#feature_imp = pd.Series(model.feature_importances_,index=features).sort_values(ascending=False)
-#print(feature_imp)
-#sns.barplot(x=feature_imp, y=feature_imp.index)
-#plt.xlabel('Feature Importance Score')
-#plt.ylabel('Features')
-#plt.title("Visualizing Important Features")
-#plt.figure(figsize=(30,50))
-#plt.show()
-
 
 ########################################################################
 browser=webdriver.Chrome()#'/Users/noss/Downloads/chromedriver'
@@ -292,7 +240,6 @@ ETFTable=pd.DataFrame(ETFComparisonsTable)
 ETFTable=ETFTable.T
 ETFTable.columns=columnNames
 
-
 #date scraping and stock scraping (comparison with yesterday)
 browser.get("https://kabuoji3.com/stock/{}/".format(1321))
 stockTable=browser.find_element_by_class_name("table_wrap")
@@ -321,7 +268,6 @@ df.columns=["日経225連動型上場投資信託：前日比"]
 #add table
 stockPriceTable=pd.concat([df_date,ETFTable],axis=1)
 stockPriceTable=pd.concat([stockPriceTable,df],axis=1)
-
 
 #ready for future price prediction
 valueX=stockPriceTable[features]
