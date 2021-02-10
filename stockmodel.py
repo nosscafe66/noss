@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-
-
 #リストから銘柄を選択
 import string
 import json
@@ -249,6 +246,7 @@ for pred in y_pred:
        
     
 #print("確率："+str(metrics.accuracy_score(testUpDown,predUpDown)*100)+"%")
+
 #feature evaluation and plots
 #feature_imp = pd.Series(model.feature_importances_,index=features).sort_values(ascending=False)
 #print(feature_imp)
@@ -353,161 +351,3 @@ def send_slack(content):
     data=json.dumps(payload)
     requests.post(slackURL,data)
 send_slack(resultNotification)
-
-
-# 
-
-# In[15]:
-
-
-
-
-
-# In[22]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[9]:
-
-
-#pip show chromedriver-binary
-
-
-# In[6]:
-
-
-#pip install chromedriver-binary
-
-
-# In[3]:
-
-
-#!pip install selenium
-
-
-# In[7]:
-
-
-#!pip install chromedriver-binary==88.0.4324.96
-
-
-# In[8]:
-
-
-#pip install chromedriver-binary==88.0.4324.96
-
-
-# In[18]:
-
-
-#!pip install scipy
-#!pip install pandas
-#!pip install selenium
-#!pip install scikit-learn
-#!pip install matplotlib
-
-
-# In[20]:
-
-
-#pyenv install -l
-
-
-# In[22]:
-
-
-#!brew install pyenv
-
-
-# In[1]:
-
-
-
-
-
-# In[2]:
-
-
-import pandas as pd
-pd.__version__
-
-
-# In[8]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
