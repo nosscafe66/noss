@@ -2,7 +2,7 @@
 
 #brewアップデートとpipのアップデート
 brew update
-brew install pyenv
+brew upgrade
 pip install --upgrade pip
 
 #株価予測プログラムに必要なパッケージインストール
@@ -17,15 +17,16 @@ pip3 install seaborn
 
 #pyenvのインストールとバージョン確認
 brew install pyenv
+brew upgrade pyenv
+brew install python
 pyenv -v
 pyenv install --list
-pyenv install 3.8.0
+echo y | pyenv install 3.8.0
 pyenv global 3.8.0
 
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 
 #バージョン確認
 pyenv versions
 python -V
+
+pip install -r ./requirements.txt
