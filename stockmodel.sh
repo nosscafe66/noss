@@ -11,7 +11,7 @@ chmod 777 stockmodel.py
 
 #株価予測プログラムを動作させる
 echo "これより株価の予測プログラムを開始"
-python stockmodel.py >> log.txt
-
+pip freeze >> ./requirements.txt
+python stockmodel.py >> ./log.txt
 
 echo "株価予測が終了しました。"
