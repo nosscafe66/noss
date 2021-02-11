@@ -1,0 +1,90 @@
+.header {
+  height: 500px;
+  width: auto;
+  background-color: aqua;
+}
+
+.header-tltle {
+  height: 100px;
+  width: auto;
+  background-color: #070755;
+}
+  
+.header-list {
+
+  height: 350px;
+  width: auto;
+  background-color: #7b7bda;
+}
+
+
+.all-wrapper {
+
+  height: 4000px;
+  width: auto;
+  background-color: #f3c809;
+
+}
+
+.message-wrapper {
+  
+  height: 1500px;
+  width: auto;
+  background-color: #c4971b;
+
+}
+
+.greeting {
+
+  height: 700px;
+  width: auto;
+  background-color: #94700d;
+
+}
+
+.favorite {
+
+  height: 700px;
+  width: auto;
+  background-color: #381a02;
+}
+
+.skill-career-wrapper {
+
+  height: 1500px;
+  width: auto;
+  background-color: #379fcf;
+}
+
+.career {
+
+  height:  700px;
+  width: auto;
+  background-color: #a02929;
+}
+
+.career-list {
+  height: 400px;
+  width: auto;
+  background-color: #e2572d;
+}
+
+.skill {
+  height: 700px;
+  width: auto;
+  background-color: #283fbd;
+}
+
+.skill-list {
+  height: 400px;
+  width: auto;
+  background-color: #3980eb;
+}
+  
+  
+
+.footer {
+  height: 300px;
+  width: auto;
+  background-color: #0a965c;
+}

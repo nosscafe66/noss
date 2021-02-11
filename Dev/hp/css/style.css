@@ -1,0 +1,940 @@
+/*タイピングによる文字列操作のプログラム*/
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes cursor {
+  50% { border-right-color: transparent; }
+}
+.hello p {
+  font: bold 250% Consolas, Monaco, monospace;
+  width: 21ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .05em solid;
+  animation: typing 8s steps(21),
+  cursor 1s steps(10) infinite;
+  color: white;
+  display: inline-block;
+  margin-left: 390px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes cursor {
+  50% { border-right-color: transparent; }
+}
+.greeting h1 {
+  font: bold 250% Consolas, Monaco, monospace;
+  width: 21ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .05em solid;
+  animation: typing 8s steps(21),
+  cursor 1s steps(10) infinite;
+  display: inline-block;
+  margin-left: 410px;
+}
+/*タイピングによる文字列操作のプログラム*/
+
+
+
+/*レスポンシブデザインの作成~ipad~*/
+@media (max-width: 1025px) {
+  
+
+  .hello p {
+    font: bold 200% Consolas, Monaco, monospace;
+    width: 21ch;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .05em solid;
+    animation: typing 8s steps(21),
+    cursor 1s steps(10) infinite;
+    color: white;
+    display: inline-block;
+    margin-left: 150px;
+  }
+
+  .greeting h1 {
+    font: bold 200% Consolas, Monaco, monospace;
+    width: 21ch;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .05em solid;
+    animation: typing 8s steps(21),
+    cursor 1s steps(10) infinite;
+    display: inline-block;
+    margin-left: 170px;
+  }
+
+
+  .greeting {
+    height: 200px;
+    width: auto;
+    display: inline-block;
+  }
+  
+  
+  .greeting h2 {
+    font-size: 15px;
+    margin-left: 500px;
+    
+  }
+  
+  .greeting h3 {
+    font-size: 10px;
+    margin-left: 550px;
+  }
+  .h2 t1 {
+    font-size: 10px;
+    margin-left: 200px;
+  }
+  
+  .h3 t2{
+    font-size: 5px;
+    margin-left: 250px;
+  }
+
+
+  .favorite {
+    height: auto;
+    width: auto;
+    
+  }
+  
+  
+  .favorite li{
+    list-style: none;
+    display: inline-block;
+  }
+  
+  
+  .favorite-background-color {
+    background-color: #5a44446e;
+    height: 80px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .favorite-list-all {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .favorite-list-n {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+  }
+
+
+}
+
+
+.a {
+  font-size: 25px;
+}
+.a p{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.text {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+/*header関連------------------------------------------------------------------------------*/ 
+
+.header {
+  height: 900px;
+  width: auto;
+  background-image: url(https://images.unsplash.com/photo-1530347927633-5f393ff7abd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+  background-position: center;
+}
+
+
+
+.text-custom {
+  font-size: 50px;
+  margin: 20px;
+}
+
+.dot {
+  color: rgb(89, 192, 89);
+}
+
+.header-title-color {
+  height: 80px;
+  width: 550px;
+  background-color: rgba(226, 108, 65, 0.295);
+  border-radius: 40px;
+  margin: 20px;
+}
+
+
+.header-title {
+  height: 50px;
+  width: auto;
+}
+
+.header-list  {
+  height: 200px;
+  width: auto;
+  color: white;
+}
+
+.header-list-n li  {
+  display: inline-block;
+  margin: 30px;
+}
+
+.header-list-n :hover {
+  transition: all 0.5s;
+  color: rgba(255, 255, 255, 0.295);
+}
+
+.header-list-n a {
+  color: white;
+}
+
+
+.header-list-n {
+  display: flex;
+}
+
+
+.all-wrapper {
+  height: auto;
+  width: auto;
+}
+
+.text-custom {
+  color: coral;
+}
+
+.message-wrapper {
+  height: 800px;
+  background-image: url(https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+}
+
+
+.greeting {
+  height: 200px;
+  width: auto;
+  display: inline-block;
+}
+
+
+.greeting h2 {
+  font-size: 15px;
+  margin-left: 500px;
+}
+
+.greeting h3 {
+  font-size: 10px;
+  margin-left: 550px;
+}
+
+
+
+/*favoriteの作成----------------------------------------------------------------------------*/
+
+.Self-introduction p {
+  background-color: rgba(201, 148, 35, 0.315);
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.favorite {
+  height: 700px;
+  width: auto;
+}
+
+.favorite li{
+  list-style: none;
+  display: inline-block;
+}
+
+.favorite-background-color {
+  background-color: #5a44446e;
+  height: 80px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.favorite-list-all {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.favorite-list-n {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.favorite-1 {
+  background-color: #e9a33a71;
+}
+.favorite-2 {
+  background-color: #c0951f71;
+}
+.favorite-3 {
+  background-color: #cc951d71;
+}
+
+.skill-career-wrapper {
+  height:900px;
+  background-image: url(https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
+  background-size: cover;
+}
+
+
+/*skillの作成-------------------------------------------------------------------------------------*/
+.skill-career-wrapper p {
+  font-size: 30px;
+}
+
+.container1  {
+ text-align: left;
+ display: block;
+ float: left;
+ width: 300px;
+ margin: 50px;
+ color:rgba(255, 255, 255, 0.705);
+ padding-top: 50px;
+}
+
+.container2 {
+  text-align: left;
+  display: block;
+  float: right;
+  width: 300px;
+  margin: 50px;
+  color:rgba(255, 255, 255, 0.705);
+  padding-top: 50px;
+}
+
+.bar{
+  background:#353b48;
+  display: block;
+  height: 5px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-radius:3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #33df23b3;
+}
+
+.bar2{
+  background:#353b48;
+  display: block;
+  height: 5px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-radius:3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #33df23b3;
+}
+
+.bar span{
+  height: 2px;
+  float: left;
+  background: #33df23b3;
+}
+
+.bar2 span{
+  height: 2px;
+  float: left;
+  background:#33df23b3;
+}
+
+.html{
+  width: 90%;
+  animation: html 2s;
+}
+
+.python{
+  width: 70%;
+  animation: python 2s;
+}
+
+.javascript{
+  width: 65%;
+  animation: javascript 2s;
+}
+
+.java{
+  width:50%;
+  animation: java 2s;
+}
+
+.sql{
+  width:45%;
+  animation: sql 2s;
+}
+
+@keyframes html{
+  0%{
+  width: 0%;
+  }
+  100%{
+  width:90%;
+  }
+  }
+
+@keyframes python{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width:70%;
+  }
+  }
+
+@keyframes javascript{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width:50%;
+  }
+  }
+
+@keyframes html{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width:65%;
+  }
+  }  
+
+@keyframes sql{
+  0%{
+  width: 0%;
+  }
+  100%{
+  width:40%;
+  }
+  }
+
+  .processing{
+    width: 60%;
+    animation: processing 2s;
+  }
+  
+  .go{
+    width: 20%;
+    animation: go 2s;
+  }
+  
+  .jquery{
+    width: 50%;
+    animation: jquery 2s;
+  }
+  
+  .scraping{
+    width:80%;
+    animation: scraping 2s;
+  }
+  
+  .humanbeatbox{
+    width:100%;
+    animation: humanbeatbox 2s;
+  }
+  
+  @keyframes html{
+    0%{
+    width: 0%;
+    }
+    100%{
+    width:60%;
+    }
+    }
+  
+  @keyframes python{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width:20%;
+    }
+    }
+  
+  @keyframes javascript{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width:50%;
+    }
+    }
+  
+  @keyframes html{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width:80%;
+    }
+    }  
+  
+  @keyframes sql{
+    0%{
+    width: 0%;
+    }
+    100%{
+    width:100%;
+    }
+    }
+
+
+
+.service  p {
+  background-color: rgba(28, 92, 28, 0.315);
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.list li {
+  margin: 10px;
+}
+
+a{
+  text-align: center;
+}
+
+.skill {
+  height: 400px;
+  width: auto;
+}
+
+.skill-list-n {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.skill-list li {
+  list-style: none;
+  /*display: inline-block;*/
+}
+
+.skill-list-all {
+  height: 600px;
+  width: 1000px;
+  display: inline-block;
+  margin: 30px;
+  /*text-align: center;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-background-color {
+  background-color: #ffffff98;
+  height: 80px;
+  width: 800px;
+  margin: 20px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10px;
+}
+
+.skill-list1  {
+  background-color: #10161471;
+}
+/*#227c5e71*/
+
+.sns-wrapper {
+  height: 800px;
+  background-image: url(https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
+
+.contact p {
+  background-color: rgba(235, 195, 134, 0.315);
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+
+.footer {
+  height: 130px;
+  width: auto;
+  background-color: rgb(189, 89, 31);
+}
+
+.footer p {
+  color: white;
+  font-size:30px;
+}
+
+.footer-list-all {
+  color: rgb(0, 0, 0);
+  list-style: none;
+
+}
+
+.footer-list-n a {
+  color: white;
+  margin: 50px;
+}
+
+.footer-list-all  li {
+  display: inline-block;
+}
+
+.footer-list-n{
+  display: flex;
+}
+
+.footer-list-n :hover {
+  transition: all 0.5s;
+  color: #ffffff5b;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #333;
+  --color-gray: #75787b;
+  --color-gray-light: #bbb;
+  --color-gray-disabled: #e8e8e8;
+  --color-green: #e7890e;
+  --color-green-dark: #383;
+  --font-size-small: .80rem;
+  --font-size-default: .875rem;
+}
+
+.section h2 {
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+  .section {
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.progress-bar li {
+  flex: 2;
+  position: relative;
+  padding: 0 0 14px 0;
+  font-size: var(--font-size-default);
+  line-height: 1.5;
+  color: var(--color-orange);
+  font-weight: 600;
+  /*white-space: nowrap;*/
+  overflow: visible;
+  min-width: 0;
+  text-align: center;
+  border-bottom: 2px solid var(--color-gray-disabled);
+}
+.progress-bar li:first-child,
+.progress-bar li:last-child {
+  flex: 1;
+}
+
+.progress-bar li:last-child {
+  text-align: right;
+}
+
+.progress-bar li:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gray-disabled);
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  position: absolute;
+  left: calc(50% - 6px);
+  bottom: -7px;
+  z-index: 3;
+  transition: all .2s ease-in-out;
+}
+.progress-bar li:first-child:before {
+  left: 0;
+}
+.progress-bar li:last-child:before {
+  right: 0;
+  left: auto;
+}
+.progress-bar span {
+  transition: opacity .3s ease-in-out;
+}
+.progress-bar li:not(.is-active) span {
+  opacity: 0;
+}
+.progress-bar .is-complete:not(:first-child):after,
+.progress-bar .is-active:not(:first-child):after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
+  left: -50%;
+  z-index: 2;
+  border-bottom: 2px solid var(--color-green);
+}
+.progress-bar li:last-child span {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  left: -100%;
+}
+
+.progress-bar .is-complete:last-child:after,
+.progress-bar .is-active:last-child:after {
+  width: auto;
+  left: -100%;
+}
+
+.progress-bar .is-complete:before {
+  background-color: var(--color-green);
+}
+
+.progress-bar .is-active:before,
+.progress-bar li:hover:before,
+.progress-bar .is-hovered:before {
+  background-color: var(--color-white);
+  border-color: var(--color-green);
+}
+.progress-bar li:hover:before,
+.progress-bar .is-hovered:before {
+  transform: scale(2);
+}
+
+.progress-bar li:hover span,
+.progress-bar li.is-hovered span {
+  opacity: 1;
+}
+
+.box17{
+  margin:2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.box17:before, .box17:after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+.box17:before {left: 10px;}
+.box17:after {right: 10px;}
+.box17 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.sns p{
+  background-color: rgba(201, 148, 35, 0.315);
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  color:rgba(255, 255, 255, 0.705);
+}
+
+
+/*
+.sns  p {
+  background-color: rgba(238, 227, 203, 0.925);
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-black);
+}
+*/
+/*
+.progress-bar:hover li:not(:hover) span {
+  opacity: 0;
+}
+*/
+
+
+
+
+
+
+/*
+.skill-list4  {
+  background-color: #8cd79067;
+}
+.skill-list5  {
+  background-color: #c5e99b63;
+}
+.skill-list6  {
+  background-color: #75757565;
+}
+*/
+/*cの作skill-------------------------------------------------------------------------------------*/
+
+
+/*
+.ftext {
+  text-align: center;
+  font-size: 20px;
+}
+*/
+
+/*careerの作成-------------------------------------------------------------------------------------*/
+/*
+.career {
+  height: 400px;
+  width: auto;
+}
+
+
+.career-list {
+  height: 400px;
+  width: auto;
+}
+
+.career-list-n {
+  display: flex;
+}
+
+.career-list li {
+  list-style: none;
+  display: inline-block;
+}
+
+.career-list-all {
+  height: 300px;
+  width: 400px;
+  display: inline-block;
+  margin: 30px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.career-background-color {
+  background-color: #ffffff98;
+  height: 80px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+
+.career-list1  {
+  background-color: #227c5e63;
+}
+.career-list2  {
+  background-color: #37977a5d;
+}
+.career-list3  {
+  background-color: #77af9c59;
+}
+.career-list4  {
+  background-color: #8cd79052;
+}
+.career-list5  {
+  background-color: #c5e99b4f;
+}
+.career-list6  {
+  background-color: #75757552;
+}
+*/
+
+/*careerの作成-------------------------------------------------------------------------------------*/
+/*skill-career-wrapperの作成-----------------------------------------------------------------------=======*/
+
+
+/*
+.dot {
+  color: rgb(248, 88, 120);
+}
+
+.greeting h1 {
+  color: #2e8b57;
+  font-size: 60px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.greeting h2 {
+  color: forestgreen;
+  font-size: 50px;
+  padding-left: 10px;
+}
+
+.greeting h3 {
+  font-size: 35px;
+  padding-left: 10px;
+}
+
+.greeting h4 {
+  font-size: 35px;
+  padding-left: 10px;
+
+}
+
+
+/*
+footer {
+  height: 500px;
+}
+*/
