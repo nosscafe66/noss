@@ -44,17 +44,11 @@ Function Json_File_Validate($PATH){
     return $return
 }
 
-#EMRクラスタ作成処理
 Function Create_EMR_Cluster($Cluster_Name){
     $Cluster_Id = $null
     Write-Host $Cluster_Name
     $Cluster_Id=(aws emr create-cluster --name $Cluster_Name --release-label emr-5.32.0 --applications Name=Hadoop Name=Hive Name=Ganglia Name=Spark --ec2-attributes file://EMR1.json --instance-groups file://EMR2.json --configurations file://EMR3.json --auto-scaling-role EMR_AutoScaling_DefaultRole --termination-protected  --ebs-root-volume-size 10 --service-role EMR_DefaultRole --scale-down-behavior TERMINATE_AT_TASK_COMPLETION --region us-east-2)
-    #Write-Host $Cluster_Id
-    #Write-Output Starting EMR cluster ID : $Cluster_Id ...
-    #aws emr wait cluster-running --cluster-id $Cluster_Id
 
-    #以下のEMR起動オプションについては検討
-    #--log-uri (string)⇒ログに関する内容
 }
 
 #メイン処理
@@ -72,7 +66,6 @@ Function Main($DIR,$NAME){
     }
 }
 
-#ジョブへの戻り値の引き渡し
 Function Return_Args($return_args){
     $Return = Main (Convert-Path .) $return_args
     Write-Host $Return
