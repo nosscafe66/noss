@@ -40,14 +40,12 @@ function Log($LogString){
 
 
 
-#動作中のクラスタIDを取得
+
 Function Active_ClusterId_Get($Cluster_Name){
     $Active_Cluster_Id = (aws emr list-clusters --active --query  "Clusters[?Name=='$Cluster_Name'].[Id]"--output text)
     return $Active_Cluster_Id
 }
 
-
-#重複チェック処理：チェック方法はクラスタ名＋ステータス（active）⇒今後実装予定
 Function Double_Check($Cluster_Name,$Status_ID){
     $Cluster_Status = (aws emr list-clusters --active --query "Clusters[?Name=='$Cluster_Name']|[?Id =='$Status_ID'].[Status.State]"--output text)
     while($true){
@@ -60,7 +58,7 @@ Function Double_Check($Cluster_Name,$Status_ID){
     }return $Cluster_Status
 }
 
-#クラスターの削除
+
 Function Active_ClusterId_Delete($Terminate_Cluster_Status){
     aws emr modify-cluster-attributes --cluster-id $Active_ClusterId_Delete --no-termination-protected
     $Terminate_Cluster_Status = (aws emr terminate-clusters --cluster-id $Active_ClusterId_Delete --query 'Cluster.Status.State' --output text)
@@ -74,7 +72,6 @@ Function Active_ClusterId_Delete($Terminate_Cluster_Status){
     }return $Terminate_Cluster_Status
 }
 
-#メイン処理
 Function MainTest_Stop($NAME){
     Log $LogString
     $ID = Active_ClusterId_Get $NAME
@@ -82,7 +79,7 @@ Function MainTest_Stop($NAME){
     Active_ClusterId_Delete $Status
 }
 
-#ジョブへの戻り値の引き渡し
+
 Function Return_Args($return_args){
     $Return = MainTest_Stop $return_args
     Write-Host $Return
