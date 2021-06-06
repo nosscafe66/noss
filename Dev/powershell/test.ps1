@@ -38,20 +38,17 @@ function Log($LogString){
 }
 
 #Jsonファイル存在確認
-Function Json_File_Validate($PATH){
+Function File_Validate($PATH){
     Test-path ("$PATH\*EMR*" + "*.json")
-    #$return = Get-ChildItem -Path .\*.json
     return $return
 }
 
-Function Create_EMR_Cluster($Cluster_Name){
+Function EMR_Cluster_Create($Cluster_Name){
     $Cluster_Id = $null
     Write-Host $Cluster_Name
-    $Cluster_Id=(aws emr create-cluster --name $Cluster_Name --release-label emr-5.32.0 --applications Name=Hadoop Name=Hive Name=Ganglia Name=Spark --ec2-attributes file://EMR1.json --instance-groups file://EMR2.json --configurations file://EMR3.json --auto-scaling-role EMR_AutoScaling_DefaultRole --termination-protected  --ebs-root-volume-size 10 --service-role EMR_DefaultRole --scale-down-behavior TERMINATE_AT_TASK_COMPLETION --region us-east-2)
-
+    $Cluster_Id=(aws emr create-cluster --name $Cluster_Name --release-label emr-5.32.0 --applications Name=Hadoop Name=Hive Name=Ganglia Name=Spark --ec2-attributes file://File1.json --instance-groups file://File2.json --configurations file://File3.json)
 }
 
-#メイン処理
 Function Main($DIR,$NAME){
     Log $LogString
     Json_File_Validate $DIR
