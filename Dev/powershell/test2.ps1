@@ -67,7 +67,7 @@ Function Active_ClusterId_Delete($Terminate_Cluster_Status){
             Write-Host "クラスターは終了しています。"
             Start-Sleep -Second 10
         }else{
-            Write-Host $Active_Cluster_Id "ユーザーのリクエストによりクラスターは削除されました。"
+            Write-Host $Active_Cluster_Id "クラスターは削除されました。"
         }
     }return $Terminate_Cluster_Status
 }
