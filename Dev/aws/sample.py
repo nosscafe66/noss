@@ -19,7 +19,8 @@ class Main:
             mainlog.cloud_watch()
             
         if "<your_s3_bucket_name>" in self.args:
-            mainlog = s3.Log(sys.argv[2],sys.argv[3],sys.argv[4])
+            result = main()
+            mainlog = s3.Log(result,sys.argv[3],sys.argv[4])
             mainlog.s3()
       except Exception as e:
         print(e)
