@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[3]:
+
+
 #リストから銘柄を選択
 import string
 import json
@@ -16,10 +19,15 @@ import time
 import chromedriver_binary
 from webdriver_manager.chrome import ChromeDriverManager
 #%matplotlib inline
+
+#chromedriverは都度更新が必要なものになる。
  
 browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get('https://google.com')
+
 browser = webdriver.Chrome()
+#executable_path='/path/to/driver/chromedriver'
+#export PATH=$PATH:/path/to/driver/chrome-driver
     
 columnNames=[]
 ETFComparisonsTable=[]
@@ -67,13 +75,17 @@ for num in range(0,7):
         stockTitleBox=browser.find_element_by_class_name("base_box_ttl")
         stockTitle=stockTitleBox.find_element_by_class_name("jp").text
         columnNames.append(stockTitle)
-
+#browser.implicitly_wait(10)
+#making ETF table
 
 ETFTable=pd.DataFrame(ETFComparisonsTable)
 ETFTable=ETFTable.T
 ETFTable.columns=columnNames
 #checking ETF table
 ETFTable.head()
+
+
+# In[4]:
 
 
 #date scraping
@@ -95,6 +107,10 @@ df_date["year"]=df_date["date"].apply(lambda x:int(x.split("-")[0]))
 df_date["month"]=df_date["date"].apply(lambda x:int(x.split("-")[1]))
 df_date["day"]=df_date["date"].apply(lambda x:int(x.split("-")[2]))
 df_date.head()
+
+
+# In[5]:
+
 
 #stock scraping (comparison with yesterday)
 browser.get("https://kabuoji3.com/stock/{}/".format(1321))
@@ -120,10 +136,23 @@ df.columns=["日経225連動型上場投資信託：前日比"]
 df.head()
 
 
+# In[7]:
+
+
 #add table
 stockPriceTable=pd.concat([df_date,ETFTable],axis=1)
 stockPriceTable=pd.concat([stockPriceTable,df],axis=1)
 stockPriceTable.head()
+
+
+# In[6]:
+
+
+#columnNames=[]
+#ETFComparisonsTable=[]
+
+
+# In[8]:
 
 
 #prepare for making target values
@@ -159,8 +188,13 @@ table["日経225連動型上場投資信託：翌日比"]=df_next["日経225連�
 table.tail()
 
 
+# In[9]:
+
+
 table.to_csv("./stockPriceData.csv",index=False)
 
+
+# In[10]:
 
 
 import pandas as pd
@@ -180,6 +214,8 @@ train=pd.read_csv("./stockPriceData.csv")
 train=train.dropna()
 train.head()
 
+
+# In[11]:
 
 
 features=['1329 iシェアーズ・コア 日経225ETF','1320 ダイワ 上場投信-日経225',
@@ -211,6 +247,19 @@ for pred in y_pred:
     else:
         predUpDown.append(-1)
        
+    
+#print("確率："+str(metrics.accuracy_score(testUpDown,predUpDown)*100)+"%")
+
+#feature evaluation and plots
+#feature_imp = pd.Series(model.feature_importances_,index=features).sort_values(ascending=False)
+#print(feature_imp)
+#sns.barplot(x=feature_imp, y=feature_imp.index)
+#plt.xlabel('Feature Importance Score')
+#plt.ylabel('Features')
+#plt.title("Visualizing Important Features")
+#plt.figure(figsize=(30,50))
+#plt.show()
+
 
 ########################################################################
 browser=webdriver.Chrome()#'/Users/noss/Downloads/chromedriver'
@@ -294,7 +343,7 @@ resultNotification="「日経225連動型上場投資信託:\n"+stockDate+"現�
 browser.quit()
 
 #SlackBot
-slackURL="https://hooks.slack.com/services/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"
+slackURL="https://hooks.slack.com/services/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"
 
 def send_slack(content):
     payload={
@@ -305,3 +354,4 @@ def send_slack(content):
     data=json.dumps(payload)
     requests.post(slackURL,data)
 send_slack(resultNotification)
+

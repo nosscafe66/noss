@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #brewアップデートとpipのアップデート
-brew update
-brew upgrade
-pip install --upgrade pip
+#brew update
+#brew upgrade
+#pip install --upgrade pip
 
 #株価予測プログラムに必要なパッケージインストール
 pip install chromedriver-binary-auto
@@ -16,13 +16,13 @@ pip install matplotlib
 pip3 install seaborn
 
 #pyenvのインストールとバージョン確認
-brew install pyenv
-brew upgrade pyenv
-brew install python
-pyenv -v
-pyenv install --list
-echo y | pyenv install 3.8.0
-pyenv global 3.8.0
+#brew install pyenv
+#brew upgrade pyenv
+#brew install python
+#pyenv -v
+#pyenv install --list
+#echo y | pyenv install 3.8.0
+#pyenv global 3.8.0
 
 
 #echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
@@ -30,6 +30,6 @@ pyenv global 3.8.0
 #echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 
 #バージョン確認
-pyenv versions
-python -V
-pip install -r ./requirements.txt
+#pyenv versions
+#python -V
+#pip install -r ./requirements.txt

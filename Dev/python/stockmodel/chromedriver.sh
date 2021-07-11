@@ -1,7 +1,17 @@
 #!/bin/bash
 
+#株価の予測プログラムを正常に起動するために必要なパッケージに更新を加えるプログラム
 ./python.sh
 
+#pip list -o アップデート必要なパッケージリスト
+#pip list -u 最新状況のパッケージのみを表示
+#pip install -U <package-name> パッケージのアップデート
+## https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8 ##pipコマンドに関する内容記載
+## https://basicincome30.com/python-install-mac ##
+##crontabによる定期実行##
+##https://docs.oracle.com/cd/E26924_01/html/E25810/sysrescron-1.html#
+
+#一時的に動作を止める
 echo "3秒間動作を止めます。"
 sleep 3
 
