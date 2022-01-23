@@ -1,0 +1,17 @@
+.button button{
+  color: rgb(0, 0, 0);
+}
+
+.button Login{
+  color: rgb(0, 0, 0);
+}
+
+.button Signup{
+  color: rgb(0, 0, 0);
+}
+
+.square_box {
+  width: 30vw;
+  height: 30vw;
+  background: #b6e9de;
+}
