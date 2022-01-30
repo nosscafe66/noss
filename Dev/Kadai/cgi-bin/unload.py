@@ -12,7 +12,7 @@ import sys
 DB_NAME = 'Kadai_DB'
 
 def table_search(*args):
-    table_list=("account_table","test_tbl","test_tbl2")
+    table_list=("account_table","test_tbl","test_tbl2")#account ,などのテーブルのキーワードを受け取り検索ワードとして扱う。
 
 TABLE_NAME=value
 conn = sqlite3.connect(DB_NAME)
