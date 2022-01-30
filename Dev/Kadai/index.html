@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +7,25 @@
   <title>kadai</title>
 </head>
   <body bgcolor="lightyellow">
-    <div class = "button">
-      <form method="POST" action="post.py">
-        <button id ="Login">Login</button>
-      </form>
+    <div class = "Top">
+      <h2>■Top</h2>
     </div>
-    <div class = "button">
-      <form method="POST" action="post.py">
-        <button id ="Signup">Signup</button>
-      </form>
+    <div class = "square_box">
+    <div>
+      <button><a href="/post/">Register</a></button>
     </div>
-    <form method="POST" action="cgi-bin/post.py">
-      <div class = "square_box">
-        <p>Your Name</p>
-          <input type="text" id="name" name="username" placeholder="username"/>
-        <p>Your Birthday</p>
-          <input type="text" id="birthday" name="birthday" placeholder="birthday"/>
-        <p>Mail Address</p>
-          <input type="text" id="mailaddress" name="mailaddress" placeholder="mailaddress"/>
-        <form action="/login" method="post">
-          <p>Your Password</p>
-            <input type="password" name="password" placeholder="password" />
-        </form>
-        <div>
-          <button id ="submit">Submit</button>
-        </div>
-      </div>
-    </form>
+    <br>
+    <div>
+      <button><a href="/get/">DataCheck</a></button>
+    </div>
+    <br>
+    <div>
+      <button><a href="/admin/">AdminPage</a></button>
+    </div>
+    <br>
+    <div>
+      <button><a href="#">PasswordChange</a></button>
+    </div>
+    </div>
   </body>
 </html>

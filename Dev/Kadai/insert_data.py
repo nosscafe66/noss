@@ -22,7 +22,7 @@ def insert_data(value1,value2,value3,value4,value5) -> None:
     print("=========Insert_Table=========")
     
     with open(query_path, "r") as sql_file:
-        query = sql_file.read().format(column1=value1,column2=value2,column3=value3,column4=value4,table_name=value5)
+        query = sql_file.read().format(value1,value2,value3,value4,table_name=value5)#column1=value1,column2=value2,column3=value3,column4=value4,table_name=value5
     cur = conn.cursor()
     cur.execute(query)
     conn.commit()

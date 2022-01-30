@@ -1,1 +1,1 @@
-INSERT INTO {table_name} VALUES ({column1},{column2},{column3},{column4});
+INSERT INTO {table_name} VALUES (?,?,?,?),({column1},{column2},{column3},{column4});

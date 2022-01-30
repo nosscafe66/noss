@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>RegisterData</title>
+<meta http-equiv="content-type" charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/getpage.css">
+</head>
+<body bgcolor="lightyellow">
+<h2>■Register</h2>
+<form action="/cgi-bin/post.py" method="post">
+  <div class = "square_box">
+    <div>
+      <label for="name">Input Username</label>
+      <input type="text" id="name" name="username" placeholder="username"/>
+    </div>
+    <br>
+    <div>
+      <label for="name">Input Birthday</label>
+      <input type="text" id="birthday" name="birthday" placeholder="birthday"/>
+    </div>
+    <br>
+    <div>
+      <label for="name">Input Mailaddress</label>
+      <input type="text" id="mailaddress" name="mailaddress" placeholder="mailaddress"/>
+    </div>
+    <br>
+    <div>
+      <label for="name">Input Password</label>
+      <input type="password" name="accountpass" placeholder="password" />
+    </div>  
+  <div>
+  <div>
+        <button id ="submit">Submit</button>
+  </div>
+</form>
+<hr>
+<a href="/">Back to Top page</a>
+</body>
+</html>

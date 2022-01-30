@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <title>DataCheck</title>
+  <meta http-equiv="content-type" charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/getpage.css">
+  </head>
+  <body bgcolor="lightyellow">
+    <h2>■DataCheck</h2>
+  <form action="/cgi-bin/get.py" method="get">
+    <div>
+      <label for="username">ViewName</label>
+      <select name="username" id="username" value=" ">
+        <option value=" "> </option>
+        <option value="yuto">yuto</option>
+        <option value="micheal">micheal</option>
+        <option value="jecica">jecica</option>
+        <option value="bush">bush</option>
+        <option value="yu-ri">yu-ri</option>
+        <option value="kohei">kohei</option>
+      </select>
+    </div>
+    <div>
+      <label for="userinfo">ViewInfo</label>
+      <select name="userinfo" id="userinfo" value=" ">
+        <option value=" "> </option>
+        <option value="birthday">birthday</option>
+        <option value="mailaddress">mailaddress</option>
+        <option value="job">job</option>
+        <option value="hobby">hobby</option>
+      </select>
+    </div>
+    <div>
+      <button>Search Data</button>
+    </div>
+  </form>
+  <form>
+    <button>
+      <a href="/cgi-bin/">File Unload</a>
+    </button>
+  </form>
+    <hr>
+    <button class="favorite styled" type="button">
+      <a href="/">Back to Top page</a>
+    </button>
+  </body>
+</html>
