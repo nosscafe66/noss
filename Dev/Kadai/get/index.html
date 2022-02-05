@@ -35,75 +35,9 @@
       <button>Search Data</button>
     </div>
   </form>
-  <form action="/cgi-bin/make_csv.py" method="post">
-    <input type="file" name="select" id="demo_btn">
-    <div id="demo_result"></div>
-    
-    <script>
-      // 読み込みボタンがchangeになったら実行
-      var read_btn = document.querySelector("#demo_btn");
-      read_btn.addEventListener("change", file_read, false);
-
-      function file_read(event) {
-
-          // 読み込まれたファイルの情報をセット
-          var file = event.target.files[0];
-          var type = file.type;  //winの場合text/csvにならない場合があるため名前でチェック
-          var name = file.name;
-          var pattern = '.csv';
-
-          // csvファイルのチェック
-          if(name.indexOf(pattern) > -1){
-              // readerオブジェクトを作成
-              var reader = new FileReader();
-              // ファイル読み取り
-              reader.readAsText(file);
-
-              // 読み込まれたファイルデータを渡す
-              reader.onload = function(e) {
-                  make_view(e.target.result);
-              };
-
-              // 読み込みに失敗した場合
-              reader.onerror = function() {
-                  alert("ファイルが読み取れません");
-              };
-          }
-      }
-      //csvデータでHTMLを組む
-      function make_view(csvdata) {
-
-        //改行ごとに配列にする
-        var tmp = csvdata.split("\n");
-
-        //結果を格納するHTMLの開始
-        var result_html = '< div id="demo_data" >';
-
-        // カンマを分解する
-        var data = [];
-        for (var i = 0; i < tmp.length; i++) {
-
-          //1行ずつカンマ区切りで配列にし、新たに配列に入れる
-          data[i] = tmp[i].split(",");
-
-          //HTMLを整形する
-          result_html += "< ul >";
-          for (var j = 0; j < data[i].length; j++) {
-            result_html += "< li >" + data[i][j] + "";
-          }
-          result_html += "< /ul >";
-        }
-
-        //結果を格納するHTMLを閉じる
-        result_html += "< /div >";
-
-        //指定のIDへ要素を挿入する
-        $("#demo_result").append(result_html);
-
-      }
-    </script>
+  <form action="/cgi-bin/make_csv.py" method="get">
     <div>
-    <button><a href="/Users/noss/Documents/GitHub/noss/Dev/Kadai/csv/account_list_*.csv" download="account_list_info.csv">Download</a></button>
+    <button>Download</button>
     </div>
   </form>
     <hr>
