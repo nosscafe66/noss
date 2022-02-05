@@ -5,29 +5,28 @@
 <meta http-equiv="content-type" charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="css/getpage.css">
+<link rel="stylesheet" href="../css/button.css">
+<link rel="stylesheet" href="../css/inputbox.css">
 </head>
-<body bgcolor="lightyellow">
-<h2>■Register</h2>
+<body bgcolor="slategray">
+  <script src="https://unpkg.com/vue"></script>
+<div>
+  <h2>■Register</h2>
+</div>
+<hr>
 <form action="/cgi-bin/post.py" method="post">
   <div class = "square_box">
-    <div>
-      <label for="name">Input Username</label>
+    <div class="cp_iptxt">
       <input type="text" id="name" name="username" placeholder="username"/>
     </div>
-    <br>
-    <div>
-      <label for="name">Input Birthday</label>
+    <div class="cp_iptxt">
       <input type="text" id="birthday" name="birthday" placeholder="birthday"/>
     </div>
-    <br>
-    <div>
-      <label for="name">Input Mailaddress</label>
+    <div class="cp_iptxt">
       <input type="text" id="mailaddress" name="mailaddress" placeholder="mailaddress"/>
     </div>
-    <br>
-    <div>
-      <label for="name">Input Password</label>
-      <input type="password" name="accountpass" placeholder="password" />
+    <div class="cp_iptxt">
+      <input type="text" name="accountpass" placeholder="password" />
     </div>  
   <div>
   <div>
@@ -35,6 +34,8 @@
   </div>
 </form>
 <hr>
-<a href="/">Back to Top page</a>
+    <button class="favorite styled" type="button">
+      <a href="/" style="text-decoration: none;">Back to Top page</a>
+    </button>
 </body>
 </html>

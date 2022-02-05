@@ -5,12 +5,16 @@
   <meta http-equiv="content-type" charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="css/getpage.css">
+  <link rel="stylesheet" href="../css/button.css">
   </head>
-  <body bgcolor="lightyellow">
+  <body bgcolor="slategray">
+    <script src="https://unpkg.com/vue"></script>
+    <div>
     <h2>■DataCheck</h2>
+    </div>
+    <hr>
   <form action="/cgi-bin/get.py" method="get">
     <div>
-      <label for="username">ViewName</label>
       <select name="username" id="username" value=" ">
         <option value=" "> </option>
         <option value="yuto">yuto</option>
@@ -22,7 +26,6 @@
       </select>
     </div>
     <div>
-      <label for="userinfo">ViewInfo</label>
       <select name="userinfo" id="userinfo" value=" ">
         <option value=" "> </option>
         <option value="birthday">birthday</option>
@@ -42,7 +45,7 @@
   </form>
     <hr>
     <button class="favorite styled" type="button">
-      <a href="/">Back to Top page</a>
+      <a href="/" style="text-decoration: none;">Back to Top page</a>
     </button>
   </body>
 </html>

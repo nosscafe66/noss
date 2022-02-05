@@ -36,7 +36,7 @@ def make_file(account_table_list:str) -> str:
         writer.writerow(["{},{},{},{},{}".format(now_str,data[count],data[count+1],data[count+2],data[count+3])])
 
 def download_csvfile(csvfile:str) -> str:
-    afterpage = codecs.open('./get/index.html', 'r', 'utf-8').read()
+    afterpage = codecs.open('./afterpage/DataUnload.html', 'r', 'utf-8').read()
     afterpage = afterpage.replace('{% filename %}', str(csvfile))
     # conn.commit()
     #cur.close()
@@ -47,6 +47,7 @@ def main():
     try:
       csvfile=make_file(account_table_list)
       afterpage=download_csvfile(csvfile)
+      print(afterpage)
       cur.close()
       conn.close()
     except Exception as exceptmessage:
