@@ -8,23 +8,32 @@ __prodactname__ = "File Unload"
 
 import sqlite3
 import sys
+import datetime
+import cgi, cgitb, sqlite3, codecs
+cgitb.enable()
+
+print("Content-Type: text/html")
+print()
+
+form = cgi.FieldStorage()
+form_check = 0
+
+dt_now = datetime.datetime.now()
 
 DB_NAME = 'Kadai_DB'
+CSV_FILE = "./" + dt_now + "_unload.csv"
 
-def table_search(*args):
-    table_list=("account_table","test_tbl","test_tbl2")#account ,などのテーブルのキーワードを受け取り検索ワードとして扱う。
-
-TABLE_NAME=value
+#table_list=("account_table","test_tbl","test_tbl2")#account ,などのテーブルのキーワードを受け取り検索ワードとして扱う。
 conn = sqlite3.connect(DB_NAME)
-c = conn.cursor()
-df_sql = pd.read_sql_query("select * from {}".format(TABLE_NAME), conn)
-conn.close()
+cur = conn.cursor()
 
-def main(*args):
-    try:
-      table_search(sys.argv[1])
-    except Exception as exceptmessage:
-      return
-    
-if __name__=="__main__":
-    main(sys.argv[1])
+cur.execute('SELECT * FROM account_table')
+account_table_list = cur.fetchall()
+print(account_table_list)
+
+with open (CSV_FILE,"w", encoding="utf-8") as f:
+    for row in cur.execute('SELECT * FROM account_table;'):
+        f.write(','.join([str(c) for c in row]) + '\n')
+        afterpage = codecs.open('./afterpage/unload.html', 'r', 'utf-8').read()
+        print(afterpage)
+        conn.close()

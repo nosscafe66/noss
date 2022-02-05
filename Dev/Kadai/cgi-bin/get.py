@@ -52,7 +52,6 @@ for data in account_table_list:
         afterpage = afterpage.replace('{% username %}', "Nothing Register")
         afterpage = afterpage.replace('{% userinfo %}', "Nothing Register")
         afterpage = afterpage.replace('{% result %}', result)
-
 print(afterpage)
 # conn.commit()
 cur.close()
