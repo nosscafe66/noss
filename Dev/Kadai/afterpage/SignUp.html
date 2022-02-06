@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <title>Registed Data</title>
+  <meta http-equiv="content-type">
+  <meta http-equiv="content-type" charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="../css/button.css">
+  </style>
+</head>
+  <body bgcolor="slategray">
+    <script src="https://unpkg.com/vue"></script>
+    <div id="app">
+      {{a}}
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          a: "SignUp OK...",
+        },
+      })
+    </script>
+    <hr>
+    <button class="favorite styled" type="button">
+      <a href="/" style="text-decoration: none;">Back to Top page</a>
+    </button>
+  </body>
+</html>

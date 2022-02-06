@@ -27,7 +27,6 @@ user_auth_query=cur.execute('SELECT id,username FROM user_table WHERE username =
 #テーブル結合を行いユーザー名に紐づく、user_idを取得
 user_table_list = cur.fetchall()
 
-
 class Login:
     def __init__(self,username:str,password:str):
       self.username = username

@@ -10,13 +10,14 @@ import hashlib
 import sys
 
 class Hash:
-    def __init__(self,password:str) -> str:
-        self.password = sys.argv[1]
+    def __init__(self,password):
+        self.password = password
 
-    def main(password:str) -> str:
-        pass_hash = hashlib.md5(password).hexdigest()
+    def get_hash(self):
+        conversion_pass = bytes(self.password, 'utf-8')
+        pass_hash = hashlib.sha256(conversion_pass).hexdigest()
         return pass_hash
 
 if __name__=="__main__":
     hash = Hash(sys.argv[1])
-    hash.main = Hash(sys.argv[1])
+    hash.get_hash()
