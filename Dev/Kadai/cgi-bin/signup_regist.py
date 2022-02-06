@@ -28,28 +28,28 @@ cur = conn.cursor()
 now = datetime.datetime.now()
 password = form["password"].value
 hash = password_hash.Hash(password)
-hash.get_hash()
+hash_pass=hash.get_hash()
 
 def register_signup_data():
     now_str = datetime.datetime.now().strftime('%H:%M:%S.%f')
-    cur.execute('INSERT INTO {} values(?, ?, ?)'.format(USER_TABLE_NAME),
-                  (form["username"].value,
+    cur.execute('INSERT INTO {} values(?, ?, ?, ?)'.format(USER_TABLE_NAME),
+                  (form["userid"].value,
+                  form["username"].value,
                   form["mailaddress"].value,
                   now_str))
     cur.execute('INSERT INTO {} values(?, ?, ?)'.format(AUTH_USER_INFO),
-              (form["username"].value,
-              hash.main,
-              now_str))
+              (form["userid"].value,
+              form["username"].value,
+              hash_pass))
     afterpage = codecs.open('./afterpage/SignUp.html', 'r', 'utf-8').read()
-    return afterpage
-
-def main():
-  try:
-    afterpage = register_signup_data()
     print(afterpage)
     conn.commit()
     cur.close()
     conn.close()
+
+def main():
+  try:
+    register_signup_data()
   except Exception as exceptmessage:
     return
 

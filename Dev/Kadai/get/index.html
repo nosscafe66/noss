@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="css/getpage.css">
   <link rel="stylesheet" href="../css/button.css">
+  <link rel="stylesheet" href="../css/select.css">
   </head>
   <body bgcolor="slategray">
     <script src="https://unpkg.com/vue"></script>
@@ -14,25 +15,31 @@
     </div>
     <hr>
   <form action="/cgi-bin/get.py" method="get">
-    <div>
-      <select name="username" id="username" value=" ">
-        <option value=" "> </option>
+    <div class="cp_ipselect">
+    <select name="username" id="username" value=" " class="cp_sl02" required>
+      <option value="" hidden disabled selected></option>
         <option value="yuto">yuto</option>
         <option value="micheal">micheal</option>
         <option value="jecica">jecica</option>
         <option value="bush">bush</option>
         <option value="yu-ri">yu-ri</option>
         <option value="kohei">kohei</option>
-      </select>
+    </select>
+    <span class="cp_sl02_highlight"></span>
+    <span class="cp_sl02_selectbar"></span>
+    <label class="cp_sl02_selectlabel">Select</label>
     </div>
-    <div>
-      <select name="userinfo" id="userinfo" value=" ">
-        <option value=" "> </option>
+    <div class="cp_ipselect">
+    <select name="userinfo" id="userinfo" value=" " class="cp_sl02" required>
+      <option value="" hidden disabled selected></option>
         <option value="birthday">birthday</option>
         <option value="mailaddress">mailaddress</option>
         <option value="job">job</option>
         <option value="hobby">hobby</option>
-      </select>
+    </select>
+    <span class="cp_sl02_highlight"></span>
+    <span class="cp_sl02_selectbar"></span>
+    <label class="cp_sl02_selectlabel">Select</label>
     </div>
     <div>
       <button>Search Data</button>
@@ -44,8 +51,6 @@
     </div>
   </form>
     <hr>
-    <button class="favorite styled" type="button">
-      <a href="/" style="text-decoration: none;">Back to Top page</a>
-    </button>
+    <button type="button" onclick="location.href='/'">Back to Top page</button>
   </body>
 </html>

@@ -19,7 +19,7 @@ DB_NAME = 'Kadai_DB'
 conn = sqlite3.connect(DB_NAME)
 cur = conn.cursor()
 
-cur.execute('SELECT * FROM account_table')
+cur.execute('SELECT * FROM task_table')
 account_table_list = cur.fetchall()
 
 result = '''

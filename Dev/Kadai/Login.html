@@ -22,7 +22,7 @@
 <form action="/cgi-bin/login.py" method="get">
   <div class = "square_box">
     <div class="cp_iptxt">
-      <input type="text" name="username" placeholder="username">
+      <input type="text" name="loginid" placeholder="loginID">
       <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
     </div>
     <div class="cp_iptxt">
@@ -30,12 +30,12 @@
       <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
     </div>
     <div>
-      <button><a href="/" style="text-decoration: none;">Login</a></button>
+      <button type="button" onclick="location.href='/'">Login</button>
     </div>
 </form>
-<form action="/cgi-bin/Signup.py" method="get">
+<form action="/cgi-bin/signup_regist.py" method="get">
     <div>
-      <button><a href="/signup/" style="text-decoration: none;">Signup</a></button>
+      <button type="button" onclick="location.href='/signup/'">Signup</button>
     </div>
 </form>
   </div>

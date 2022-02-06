@@ -16,7 +16,7 @@ form_check = 0
 
 DB_NAME = 'Kadai_DB'
 QUERY_PATH= "./sql/Regist_data_insert.sql"
-TABLE_NAME="account_table"
+TABLE_NAME="task_table"
 
 conn = sqlite3.connect(DB_NAME)
 cur = conn.cursor()
@@ -29,10 +29,10 @@ cur = conn.cursor()
 #cur.execute(query)
 def register_data():
     cur.execute('INSERT INTO {} values(?, ?, ?, ?)'.format(TABLE_NAME),
-                  (form["username"].value,
-                  form["birthday"].value,
+                  (form["date"].value,
+                  form["username"].value,
                   form["mailaddress"].value,
-                  form["accountpass"].value))
+                  form["task"].value))
     afterpage = codecs.open('./afterpage/RegisterData.html', 'r', 'utf-8').read()
     print(afterpage)
     conn.commit()
