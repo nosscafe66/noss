@@ -1,4 +1,4 @@
-# kadai_vue
+# mypro-vue
 
 ## Project setup
 ```
