@@ -5,7 +5,7 @@ __status__ = "production"
 __version__ = "0.0.1"
 __date__    = "22 Janualy 2022"
 __prodactname__ = "Insert_Table_Tool"
-__command__ = "python /Users/noss/Documents/GitHub/noss/Dev/Kadai/insert_table.py data1.csv Insert_data.sql account_table"
+__command__ = "python insert_table.py data1.csv Insert_data.sql account_table"
 
 from email import header
 import sqlite3

@@ -15,9 +15,8 @@
 <h2>■Search Result</h2>
 </div>
 <hr>
-
-<div>username = {% username %}</div>
-<div>userinfo = {% userinfo %}</div>
+<div id="app">{{username}} = {% username %}</div>
+<div id="app">userinfo = {% userinfo %}</div>
 
   {% result %}
 
@@ -26,4 +25,15 @@
     <button type="button" onclick="location.href='/'">Back to Top page</button>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          message: "Output Data!"
+        }
+      }
+    });
+  </script>
 </html>

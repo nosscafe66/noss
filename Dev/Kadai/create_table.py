@@ -5,7 +5,7 @@ __status__ = "production"
 __version__ = "0.0.1"
 __date__    = "22 Janualy 2022"
 __prodactname__ = "Create_Table_Tool"
-__command__ = "python /Users/noss/Documents/GitHub/noss/Dev/Kadai/create_table.py test_tbl DDL.sql"
+__command__ = "python create_table.py test_tbl DDL.sql"
 
 import sqlite3
 import os

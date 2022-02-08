@@ -11,19 +11,21 @@
   </style>
 </head>
   <body bgcolor="slategray">
-    <script src="https://unpkg.com/vue"></script>
     <div id="app">
-      {{a}}
-</div>
-<script>
-      new Vue({
-        el: "#app",
-  data: {
-          a: "Registed Data...",
-        },
- })
-</script>
+      <p>{{message}}</p>
+    </div>
     <hr>
     <button type="button" onclick="location.href='/'">Back to Top page</button>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          message: "Registed Data!"
+        }
+      }
+    });
+  </script>
 </html>
