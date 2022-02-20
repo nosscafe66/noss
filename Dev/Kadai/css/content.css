@@ -4,3 +4,13 @@
     text-align: center;
     margin-right: 10px;
 }
+
+.haikei{
+  width: 400px;
+  height: 200px;
+  background-image: url(computer.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  opacity: 0.3;
+}

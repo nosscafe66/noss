@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../css/sidebar.css">
 <link rel="stylesheet" href="../css/glovalNavigation.css">
 <link rel="stylesheet" href="../css/content.css">
-<link rel="stylesheet" href="../css/localNavigation.css">
+<link rel="stylesheet" href="../css/sidecontent.css">
 <link rel="stylesheet" href="../css/footer.css">
 <link rel="stylesheet" href="../css/main.css">
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -27,7 +27,7 @@
        $("#sidebar").load("../Template/sidebar.html");
        $("#content").load("../Template/main.html");
        $("#glovalNavigation").load("../Template/glovalNavigation.html");
-       $("#localNavigation").load("../Template/localNavigation.html");
+       $("#sidecontent").load("../Template/sidecontent.html");
        $("#footer").load("../Template/footer.html");
   });
 </script>
@@ -52,15 +52,19 @@
       <li>
       <button type="button" onclick="location.href='#'">PasswordChange</button>
       </li>
+      <li>
+      <button type="button" onclick="location.href='/'">Signout</button>
+      </li>
     </ul>
   </nav>
 </header>
   <div id="glovalNavigation"></div>
   <main>
       <div id="content"></div>
-      <div id="localNavigation"></div>
+      <div class="sidecontent">
+        <p>Sidecontent</p>
+      </div>
   </main>
-    <button type="button" onclick="location.href='/'">Signout</button>
   <div id="footer"></div>
 </div>
 </body>

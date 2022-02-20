@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../css/select.css">
   <link rel="stylesheet" href="../css/body.css">
   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/selectdata.css">
+  <link rel="stylesheet" href="../css/footer.css">
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
   $(function() {
@@ -20,48 +22,47 @@
 </script>
   </head>
   <body bgcolor="slategray">
-    <script src="https://unpkg.com/vue"></script>
-    <div>
-    <h1>DataCheck</h1>
-    </div>
-    <hr>
-  <form action="/cgi-bin/get.py" method="get">
-    <div class="cp_ipselect">
-    <select name="username" id="username" value=" " class="cp_sl02" required>
-      <option value="" hidden disabled selected></option>
-        <option value="yuto">yuto</option>
-        <option value="micheal">micheal</option>
-        <option value="jecica">jecica</option>
-        <option value="bush">bush</option>
-        <option value="yu-ri">yu-ri</option>
-        <option value="kohei">kohei</option>
-    </select>
-    <span class="cp_sl02_highlight"></span>
-    <span class="cp_sl02_selectbar"></span>
-    <label class="cp_sl02_selectlabel">Select</label>
-    </div>
-    <div class="cp_ipselect">
-    <select name="userinfo" id="userinfo" value=" " class="cp_sl02" required>
-      <option value="" hidden disabled selected></option>
-        <option value="birthday">birthday</option>
-        <option value="mailaddress">mailaddress</option>
-        <option value="job">job</option>
-        <option value="hobby">hobby</option>
-    </select>
-    <span class="cp_sl02_highlight"></span>
-    <span class="cp_sl02_selectbar"></span>
-    <label class="cp_sl02_selectlabel">Select</label>
-    </div>
-    <div>
+    <div id="header"></div>
+    <main>
+    <div class="selectdata">
+      <form action="/cgi-bin/get.py" method="get">
+      <div class="cp_ipselect">
+      <select name="username" id="username" value=" " class="cp_sl02" required>
+          <option value="" hidden disabled selected></option>
+          <option value="yuto">yuto</option>
+          <option value="micheal">micheal</option>
+          <option value="jecica">jecica</option>
+          <option value="bush">bush</option>
+          <option value="yu-ri">yu-ri</option>
+          <option value="kohei">kohei</option>
+      </select>
+      <span class="cp_sl02_highlight"></span>
+      <span class="cp_sl02_selectbar"></span>
+      <label class="cp_sl02_selectlabel">Select</label>
+      </div>
+      <div class="cp_ipselect">
+      <select name="userinfo" id="userinfo" value=" " class="cp_sl02" required>
+          <option value="" hidden disabled selected></option>
+          <option value="birthday">birthday</option>
+          <option value="mailaddress">mailaddress</option>
+          <option value="job">job</option>
+          <option value="hobby">hobby</option>
+      </select>
+      <span class="cp_sl02_highlight"></span>
+      <span class="cp_sl02_selectbar"></span>
+      <label class="cp_sl02_selectlabel">Select</label>
+      </div>
+      <div>
       <button>Search Data</button>
     </div>
   </form>
+  </div>
   <form action="/cgi-bin/make_csv.py" method="get">
     <div>
     <button>Download</button>
     </div>
   </form>
-    <hr>
-    <button type="button" onclick="location.href='/Top/index.html'">Back to Top page</button>
+    </main>
+  <div id="footer"></div>
   </body>
 </html>

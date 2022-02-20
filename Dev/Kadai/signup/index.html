@@ -16,18 +16,14 @@
 <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 <script>
   $(function() {
-       $("#header").load("Template/header.html");
+       $("#header").load("../Template/header.html");
        $("#side").load("Template/sidebar.html");
-       $("#footer").load("Template/footer.html");
+       $("#footer").load("../Template/footer.html");
 });
 </script>
 </head>
-<div id="header"></div>
 <body bgcolor="slategray">
-  <script src="https://unpkg.com/vue"></script>
-<div>
-  <h1>Signup</h1>
-</div>
+<div id="header"></div>
 <hr>
 <div class = "top">
 <form action="/cgi-bin/signup_regist.py" method="post">
