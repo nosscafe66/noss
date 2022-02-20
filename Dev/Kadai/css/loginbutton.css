@@ -1,0 +1,11 @@
+.loginbutton {
+  margin:15px;
+}
+
+.signupbutton {
+  margin:15px;
+}
+
+button {
+  display:inline-block;
+}

@@ -8,11 +8,21 @@
   <link rel="stylesheet" href="css/getpage.css">
   <link rel="stylesheet" href="../css/button.css">
   <link rel="stylesheet" href="../css/select.css">
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/header.css">
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $(function() {
+       $("#header").load("../Template/header.html");
+       $("#side").load("side.html");
+       $("#footer").load("../Template/footer.html");
+});
+</script>
   </head>
   <body bgcolor="slategray">
     <script src="https://unpkg.com/vue"></script>
     <div>
-    <h2>■DataCheck</h2>
+    <h1>DataCheck</h1>
     </div>
     <hr>
   <form action="/cgi-bin/get.py" method="get">
@@ -52,6 +62,6 @@
     </div>
   </form>
     <hr>
-    <button type="button" onclick="location.href='/'">Back to Top page</button>
+    <button type="button" onclick="location.href='/Top/index.html'">Back to Top page</button>
   </body>
 </html>

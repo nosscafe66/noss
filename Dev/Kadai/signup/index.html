@@ -7,14 +7,29 @@
 <link rel="icon" href="/favicon/android-chrome-36x36.ico">
 <link rel="stylesheet" href="../css/button.css">
 <link rel="stylesheet" href="../css/inputbox.css">
+<link rel="stylesheet" href="../css/body.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/top.css">
 <script src="../kadai_vue/src/main.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+<script>
+  $(function() {
+       $("#header").load("Template/header.html");
+       $("#side").load("Template/sidebar.html");
+       $("#footer").load("Template/footer.html");
+});
+</script>
 </head>
+<div id="header"></div>
 <body bgcolor="slategray">
   <script src="https://unpkg.com/vue"></script>
 <div>
-  <h2>■Signup</h2>
+  <h1>Signup</h1>
 </div>
 <hr>
+<div class = "top">
 <form action="/cgi-bin/signup_regist.py" method="post">
   <div class = "square_box">
     <div class="cp_iptxt">
@@ -30,6 +45,7 @@
       <input type="text" name="password" placeholder="password"/>
     </div>  
   <div>
+</div>
   <div>
         <button id ="submit">Submit</button>
   </div>
@@ -37,4 +53,5 @@
 <hr>
     <button type="button" onclick="location.href='/'">Back to Top page</button>
 </body>
+<div id="footer"></div>
 </html>

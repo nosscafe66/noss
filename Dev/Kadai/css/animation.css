@@ -1,0 +1,17 @@
+body, html { margin: 0; background-color: #F2F0EB;font-family: Raleway; }
+
+.login{
+  position: absolute;
+  z-index:9999;
+  text-align:center;
+  padding: 40px;
+  height:200px;
+  width:200px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 4px 10px -4px rgba(0,0,0,0.15);
+}
+canvas { position: fixed; touch-action: none; }

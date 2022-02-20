@@ -10,35 +10,31 @@
 <link rel="stylesheet" href="tab.css" media="screen and (min-width:481px) and (max-width:1024px)">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/button.css">
-<link rel="stylesheet" href="css/inputbox.css">
+<link rel="stylesheet" href="css/body.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/top.css">
+<link rel="stylesheet" href="css/loginbutton.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/canvas.css">
+<link rel="stylesheet" href="css/logintop.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+<script>
+  $(function() {
+       $("#header").load("Template/header.html");
+       $("#side").load("Template/sidebar.html");
+       $("#login").load("Template/login.html");
+       $("#footer").load("Template/footer.html");
+});
+</script>
 <title>Login</title>
 </head>
-<body bgcolor="slategray">
-  <script src="https://unpkg.com/vue"></script>
-<div class = "Top">
-  <h2>■Login</h2>
-</div>
-<hr>
-<div class = "top">
-<form action="/cgi-bin/login.py" method="get">
-  <div class = "square_box">
-    <div class="cp_iptxt">
-      <input type="text" name="loginid" placeholder="loginID">
-      <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="cp_iptxt">
-      <input type="text" type="password" name="password" placeholder="password">
-      <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-    </div>
-    <div>
-      <button>Login</button><!-- type="button" onclick="location.href='/Top/'"-->
-    </div>
-</form>
-<form action="/cgi-bin/signup_regist.py" method="get">
-    <div>
-      <button type="button" onclick="location.href='/signup/'">Signup</button>
-    </div>
-</form>
-  </div>
+<body>
+  <div id="header"></div>
+    <main>
+      <div id="login"></div>
+    </main>
+  <div id="footer"></div>
 </body>
 </html>

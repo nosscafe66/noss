@@ -1,0 +1,25 @@
+HTML CSSResult Skip Results Iframe
+EDIT ON
+body {
+   font-family:'Noto Sans JP',sans-serif;
+   background-color:#f6f5f4;
+}
+
+.sidebar {
+  background-color:#c2b1b2;
+  width:300px;
+  height:600px;
+  text-align:center;
+} 
+
+.content {
+  background-color:#bfc5b4;
+  width:1000px;
+  height:600px;
+  text-align:center;
+  margin-left:10px;/*サイドバーとメインコンテンツの間に隙間をあけた*/
+}
+
+article {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする指定をした*/
+}

@@ -9,32 +9,28 @@
 <link rel="stylesheet" href="../css/button.css">
 <link rel="stylesheet" href="../css/inputbox.css">
 <link rel="stylesheet" href="../css/date.css">
+<link rel="stylesheet" href="../css/body.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/top.css">
+<link rel="stylesheet" href="../css/footer.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $(function() {
+       $("#header").load("../Template/header.html");
+       $("#side").load("side.html");
+       $("#dataregist").load("../Template/dataregist.html");
+       $("#footer").load("../Template/footer.html");
+});
+</script>
 </head>
 <body bgcolor="slategray">
-<div>
-  <h2>■TaskRegister</h2>
-</div>
 <hr>
-<form action="/cgi-bin/post.py" method="post">
-  <div class = "square_box">
-    <div class="cp_iptxt">
-      <input type="date" id="date" name="date" placeholder="date">
-    </div>
-    <div class="cp_iptxt">
-      <input type="text" id="username" name="username" placeholder="username"/>
-    </div>
-    <div class="cp_iptxt">
-      <input type="text" id="mailaddress" name="mailaddress" placeholder="mailaddress"/>
-    </div>
-    <div class="cp_iptxt">
-      <input type="text" id="task" name="task" placeholder="task"/>
-    </div>  
-  <div>
-  <div>
-        <button id ="submit">Submit</button>
-  </div>
-</form>
+<div id="header"></div>
+    <main>
+      <div id="dataregist"></div>
+    </main>
 <hr>
-    <button type="button" onclick="location.href='/'">Back to Top page</button>
+    <button type="button" onclick="location.href='/Top/index.html'">Back to Top page</button>
 </body>
+<div id="footer"></div>
 </html>
