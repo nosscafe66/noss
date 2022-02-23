@@ -23,7 +23,7 @@ cur = conn.cursor()
 
 def register_data():
     cur.execute('INSERT INTO {} values(?, ?, ?, ?)'.format(TABLE_NAME),
-                  (form["id"].value,
+                  (form["blog_id"].value,
                   form["blogtitle"].value,
                   form["article"].value,
                   form["created"].value))
