@@ -9,7 +9,6 @@ __prodactname__ = "ViewCalender"
 import cgi, cgitb, sqlite3, codecs
 import sys
 cgitb.enable()
-
 print("Content-Type: text/html")
 print()
 form = cgi.FieldStorage()
@@ -30,6 +29,7 @@ def main():
     hours,mins = str(int(now.hour)-4), str(now.minute)
     meridiem = now.strptime(f'{hours}','%H').strftime('%I %p').split(' ')
     #full_time = f'{ftime}{meridiem[1].lower()}'
-    print()
+    afterpage = codecs.open('./admin/index.html', 'r', 'utf-8').read()
+    print(afterpage)
     [print(__import__('calendar',fromlist=[None]).month(now.year,now.month,4))]
 main()

@@ -1,50 +1,46 @@
-<div class="content">
-  <ul class="cards">
-  <li class="card">
-    <h1>BLOGCONTENT1</h1>
-    <p>こんにちは</p>
-  </li>
-  <li class="card">
-    <h1>BLOGCONTENT2</h1>
-    <p>こんにちは</p>
-  </li>
-  <li class="card">
-    <h1>BLOGCONTENT3</h1>
-    <p>こんにちは</p>
+<div class="card-group">
+  <div class="card">
+    <div class="card__imgframe"></div>
+      <div class="card__textbox">
+      <div class="card__titletext">
+      タイトルがはいります。タイトルがはいります。
+      </div>
+      <div class="card__overviewtext">
+      概要がはいります。概要がはいります。概要がはいります。概要がはいります。
+      </div>
+      </div>
+      </div>
+      <div class="card">
+      <div class="card__imgframe"></div>
+      <div class="card__textbox">
+      <div class="card__titletext">
+      タイトルがはいります。タイトルがはいります。
+      </div>
+      <div class="card__overviewtext">
+      概要がはいります。概要がはいります。概要がはいります。概要がはいります。
+      </div>
+      </div>
+      </div>
+      <div class="card">
+      <div class="card__imgframe"></div>
+      <div class="card__textbox">
+      <div class="card__titletext">
+      タイトルがはいります。タイトルがはいります。
+      </div>
+      <div class="card__overviewtext">
+      概要がはいります。概要がはいります。概要がはいります。概要がはいります。
+      </div>
+      </div>
+      </div>
+      <div class="card">
+      <div class="card__imgframe"></div>
+      <div class="card__textbox">
+      <div class="card__titletext">
+      タイトルがはいります。タイトルがはいります。
+      </div>
+      <div class="card__overviewtext">
+      概要がはいります。概要がはいります。概要がはいります。概要がはいります。
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-
-<script>
-$.fn.commentCards = function(){
-
-  return this.each(function(){
-
-    var $this = $(this),
-        $cards = $this.find('.card'),
-        $current = $cards.filter('.card--current'),
-        $next;
-
-    $cards.on('click',function(){
-      if ( !$current.is(this) ) {
-        $cards.removeClass('card--current card--out card--next');
-        $current.addClass('card--out');
-        $current = $(this).addClass('card--current');
-        $next = $current.next();
-        $next = $next.length ? $next : $cards.first();
-        $next.addClass('card--next');
-      }
-    });
-
-    if ( !$current.length ) {
-      $current = $cards.last();
-      $cards.first().trigger('click');
-    }
-
-    $this.addClass('cards--active');
-
-  })
-
-};
-
-$('.cards').commentCards();
-</script>
