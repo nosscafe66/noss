@@ -3,6 +3,8 @@ EDIT ON
 body {
    font-family:'Noto Sans JP',sans-serif;
    background-color:#f6f5f4;
+   width:1300px;
+   height:600px;
 }
 
 .sidebar {

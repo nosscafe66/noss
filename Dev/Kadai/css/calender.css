@@ -1,0 +1,37 @@
+.calendar-container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #f6f5f4;
+  color: #1a1a1a;
+}
+h1 {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+.calendar {
+  padding: 0 30px 30px 30px;
+}
+table {
+  width: 100%;
+}
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+th {
+  font-weight: normal;
+  font-size: 14px;
+}
+td {
+  font-weight: bold;
+}
+.day *:first-child {
+  color: #ff838b;
+}
+.day *:last-child {
+  color: #6fb5ff;
+}

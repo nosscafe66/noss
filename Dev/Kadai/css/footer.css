@@ -2,4 +2,13 @@ footer{
     height: 77px;
     text-align: center;
     background-color: rgb(0, 0, 0);
+
+    bottom: 0; /*下に固定*/
 }
+
+/*footer{
+    height: 77px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    margin-top: auto;
+}*/

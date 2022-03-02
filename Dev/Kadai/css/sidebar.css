@@ -1,0 +1,31 @@
+.profile {
+  background: #409ecc;
+  width: 300px;
+}
+
+.profile__img {
+  width: 300px;
+}
+
+.profile__name,.profile__yomi,.profile__desc {
+  color: #fff;
+}
+
+.profile__name {
+  padding:1.6rem 2rem .2rem;
+  font-weight:bold;
+  font-size:1.2rem;
+  letter-spacing:.1rem;
+}
+
+.profile__yomi {
+  padding:0 2rem;
+  font-size:.8rem;
+  letter-spacing:.1rem;
+  opacity:.7;
+}
+
+.profile__desc {
+  padding:1.6rem 2rem;
+  line-height:1.6rem;
+}

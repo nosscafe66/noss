@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 70px;
+    text-align: center;
+    background-color: #eee;
+}
+.glovalNavigation{
+    height: 70px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+
+main{
+    display: flex;
+    min-height: 100vh;
+    margin: 110px 0 10px 0;
+}
+.content{
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin-right: 10px;
+}
+.localNavigation{
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+    width: 250px;
+}
+.footer{
+    height: 70px;
+    text-align: center;
+    background-color: #eee;
+}

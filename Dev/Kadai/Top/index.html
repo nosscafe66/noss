@@ -1,40 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="../kadai_vue/src/main.js"></script>
-<link rel="icon" href="/favicon/android-chrome-36x36.ico">
-<link rel="stylesheet" href="sp.css" media="screen and (max-width:767px)">
-<link rel="stylesheet" href="tab.css" media="screen and (min-width:768px)">
-<link rel="stylesheet" href="tab.css" media="screen and (min-width:481px) and (max-width:1024px)">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/button.css">
-<link rel="stylesheet" href="../css/body.css">
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/contents.css">
-<link rel="stylesheet" href="../css/sidebar.css">
-<link rel="stylesheet" href="../css/top.css">
-<link rel="stylesheet" href="../css/glovalNavigation.css">
-
-<link rel="stylesheet" href="../css/sidecontent.css">
-<link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/main.css">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-<script>
-  $(function() {
-       $("#header").load("../Template/header.html");
-       $("#sidebar").load("../Template/sidebar.html");
-       $("#content").load("../Template/main.html");
-       $("#glovalNavigation").load("../Template/glovalNavigation.html");
-       $("#sidecontent").load("../Template/sidecontent.html");
-       $("#footer").load("../Template/footer.html");
-  });
-</script>
-<title>Top</title>
+   <meta charset="utf-8"/>
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
+    <link rel="stylesheet" href="../css/multiColumn.css">
+    <link rel="stylesheet" href="../css/glovalNavigation.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/sidecontent.css">
 </head>
-<body bgcolor="slategray">
   <header>
   <h1>
     <a href="/" style="text-decoration: none;">FullScratchApplication</a>
@@ -59,14 +38,18 @@
     </ul>
   </nav>
 </header>
-  <div id="glovalNavigation"></div>
-  <main>
-      <div id="content"></div>
-      <div class="sidecontent">
-        <p>Sidecontent</p>
-      </div>
-  </main>
-  <div id="footer"></div>
-</div>
+<body>
+    <main>
+        <div id="content"></div>
+        <div id="sidecontent"></div>
+    </main>
+    <div id="footer"></div>
+<script>
+  $(function() {
+       $("#content").load("../Template/main.html");
+       $("#glovalNavigation").load("../Template/glovalNavigation.html");
+       $("#sidecontent").load("../Template/sidecontent.html");
+       $("#footer").load("../Template/footer.html");
+  });
+</script>
 </body>
-</html>
