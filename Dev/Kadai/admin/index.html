@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="../css/calender.css">
   <title>AdminPage</title>
 </head>
-  <body bgcolor="slategray">
-    <hr>
-    <div class="top">
+  <body>
+        <main>
+        <div id="content"></div>
+        <div id="sidecontent"></div>
+        <div class="top">
   <div class="calendar-container">
     <h1>October 2020</h1>
     <table class="calendar">
@@ -74,5 +76,16 @@
   </div>
     <button type="button" onclick="location.href='/Top/index.html'">Back to Top page</button>
     </div>
+    </main>
+    <div id="footer"></div>
+
+<script>
+  $(function() {
+       $("#content").load("../Template/main.html");
+       $("#glovalNavigation").load("../Template/glovalNavigation.html");
+       $("#sidecontent").load("../Template/sidecontent.html");
+       $("#footer").load("../Template/footer.html");
+  });
+</script>
   </body>
 </html>
