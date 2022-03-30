@@ -35,8 +35,8 @@ lome_kinmu = "lome_kinmu.png"
 kinmu_hyou_top_page = "kinmu_hyou_top_page.png"
 
 #ログインIDとパスワードを格納(iniファイルもしくはjsonファイルとしてkey:valueで社員情報を持たせる)
-mail_address = "y_konosu@ft-cons.co.jp"
-passwd = "nosscafe66"
+mail_address = "************"
+passwd = "**********"
 
 #勤務表の画像の各種値の初期化
 left = 10
