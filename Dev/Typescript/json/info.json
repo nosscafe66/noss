@@ -1,0 +1,30 @@
+{"quiz" : [
+    {
+    "question": "エンジニア何年目ですか？",
+    "answers":[
+        "1年目",
+        "2年目",
+        "3年目",
+        "4年目"
+    ],
+    "result":"3年目"
+},{
+    "question": "一番好きな業務・工程はなんですか？",
+    "answers":[
+        "コーディング",
+        "設計",
+        "要件",
+        "運用"
+    ],
+    "result":"コーディング"
+},{
+    "question": "開発言語で好きなものはどれですか？",
+    "answers":[
+        "Python",
+        "TypeScript",
+        "PHP",
+        "Ruby"
+    ],
+    "result":"Python"
+}
+]}
