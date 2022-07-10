@@ -70,6 +70,3 @@ const handleIndex = () => {
     };
 }
 handleIndex();
-
-const jsonData= require('./json/info.json'); 
-console.log(jsonData);
