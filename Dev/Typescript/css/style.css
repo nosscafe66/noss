@@ -11,7 +11,7 @@
 body {
     min-height: 100vh;
     /*background-color: rgb(199, 252, 252);*/
-    display:flex;
+    /*display:flex;*/
     align-items: center;
     justify-content: center;
 }
