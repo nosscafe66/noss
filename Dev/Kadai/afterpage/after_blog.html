@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Task</title>
+<meta http-equiv="content-type" charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="/favicon/android-chrome-36x36.ico">
+<script src="../kadai_vue/src/main.js"></script>
+<link rel="stylesheet" href="../css/button.css">
+<link rel="stylesheet" href="../css/inputbox.css">
+<link rel="stylesheet" href="../css/date.css">
+<link rel="stylesheet" href="../css/body.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/top.css">
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/footer.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $(function() {
+       $("#header").load("../Template/header.html");
+       $("#side").load("side.html");
+       $("#createblog").load("../Template/main.html");
+       $("#footer").load("../Template/footer.html");
+});
+</script>
+</head>
+<body bgcolor="slategray">
+<hr>
+<div id="header"></div>
+    <main>
+     <div id="createblog"></div>
+    </main>
+<hr>
+</body>
+<div id="footer"></div>
+</html>
